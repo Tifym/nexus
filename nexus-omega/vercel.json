@@ -1,17 +1,13 @@
-// vercel.json
 {
   "version": 2,
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/styles.css", "dest": "/public/styles.css" },
+    { "src": "/app.js", "dest": "/public/app.js" },
     { "src": "/sounds/(.*)", "dest": "/public/sounds/$1" },
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/(.*)", "dest": "/api/index.js" }
   ],
   "crons": [
     { "path": "/api/evaluate", "schedule": "*/5 * * * *" }
-  ],
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
