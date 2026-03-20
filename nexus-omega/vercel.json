@@ -4,8 +4,8 @@
     { "src": "/styles.css", "dest": "/public/styles.css" },
     { "src": "/app.js", "dest": "/public/app.js" },
     { "src": "/sounds/(.*)", "dest": "/public/sounds/$1" },
-    { "src": "/api/(.*)", "dest": "/api/$1.js" },
-    { "src": "/(.*)", "dest": "/api/index.js" }
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/", "dest": "/api/index" }
   ],
   "crons": [
     { "path": "/api/evaluate", "schedule": "*/5 * * * *" }
